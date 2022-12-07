@@ -14,7 +14,7 @@ class CdCli < Formula
       sha256 "a36f0965e24549e9e3ccb0d4d943d3010886231a760afb285c1417111ca44d31"
 
       def install
-        bin.install "cd-cli_darwin-amd64" => "./bin/cd-cli"
+        bin.install stable.url.split("/")[-1] => "cd-cli"
       end
     end
     if Hardware::CPU.arm?
@@ -22,7 +22,7 @@ class CdCli < Formula
       sha256 "29d685cfa0198d80ba0066582284a2db89d1c82f60fbeef62b90df578d93136e"
 
       def install
-        bin.install "cd-cli_darwin-arm64" => "./bin/cd-cli"
+        bin.install stable.url.split("/")[-1] => "cd-cli"
       end
     end
   end
