@@ -10,7 +10,7 @@ class CdCli < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_darwin-amd64", :using => CurlDownloadStrategy
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_darwin-amd64"
       sha256 "a36f0965e24549e9e3ccb0d4d943d3010886231a760afb285c1417111ca44d31"
 
       def install
@@ -18,7 +18,7 @@ class CdCli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_darwin-arm64", :using => CurlDownloadStrategy
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_darwin-arm64"
       sha256 "29d685cfa0198d80ba0066582284a2db89d1c82f60fbeef62b90df578d93136e"
 
       def install
@@ -29,7 +29,7 @@ class CdCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_linux-arm64", :using => CurlDownloadStrategy
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_linux-arm64"
       sha256 "db63367d0ee8bcd405f868d31e838fea13b65433ceb5fb97dfa769fc18a26ee2"
 
       def install
@@ -37,7 +37,7 @@ class CdCli < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_linux-amd64", :using => CurlDownloadStrategy
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.2/cd-cli_linux-amd64"
       sha256 "8806f45f9bcf939dd6fd2695a8c72ea177cb64d74ddfb2bd9cd87f28d4767296"
 
       def install
