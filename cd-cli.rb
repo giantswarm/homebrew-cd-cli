@@ -5,21 +5,21 @@
 class CdCli < Formula
   desc ""
   homepage ""
-  version "0.0.5"
+  version "0.0.6"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.5/cd-cli_darwin-amd64"
-      sha256 "b8cdcd1e04570af379447b7f46fcb739b4f54b9adb29984738e18c8085206a90"
+    if Hardware::CPU.arm?
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_darwin-arm64"
+      sha256 "5cc4e665ae9e201f9b318e17074c827d3b88d1e5661fcd01f96a45ec86b44c0e"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.5/cd-cli_darwin-arm64"
-      sha256 "ff4db905c92954b6ac8de47eace1ffa7aefba332f0ce6ee9372c441291eae7cc"
+    if Hardware::CPU.intel?
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_darwin-amd64"
+      sha256 "531f3d4c811b31bea33ab2d74831ee81bfd53246aa0018a4d8b45ca2b51a49aa"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
@@ -28,17 +28,17 @@ class CdCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.5/cd-cli_linux-amd64"
-      sha256 "876107d3f8f2c5c27c560b069ffb1d3a080f7877f1a7ff9e773571458d8de865"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_linux-arm64"
+      sha256 "6e28aded9e31de499129e8c2fb352ddbe258535740b70dfc6601fa95443acf2d"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.5/cd-cli_linux-arm64"
-      sha256 "4dad0310fa7e4a844635f322208f38175b09ea971dcdebc0fc749fa2eae06993"
+    if Hardware::CPU.intel?
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_linux-amd64"
+      sha256 "9a088e67ac4f2d656da70e84eac27fce216bd9357f9cf65a39fd64b6d9981fd4"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
