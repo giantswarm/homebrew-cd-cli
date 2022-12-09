@@ -11,7 +11,7 @@ class CdCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_darwin-arm64"
-      sha256 "5cc4e665ae9e201f9b318e17074c827d3b88d1e5661fcd01f96a45ec86b44c0e"
+      sha256 "ad65a55b6a5199e766c595c0bcdc1898e5104eb6921c3200530e84e8d4bd6c7b"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
@@ -19,7 +19,7 @@ class CdCli < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_darwin-amd64"
-      sha256 "531f3d4c811b31bea33ab2d74831ee81bfd53246aa0018a4d8b45ca2b51a49aa"
+      sha256 "79a78d70ce88dab0df66c81a2d4935d5c6285b25edf4ec3e0d5d368bd501aeee"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
@@ -28,17 +28,17 @@ class CdCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_linux-arm64"
-      sha256 "6e28aded9e31de499129e8c2fb352ddbe258535740b70dfc6601fa95443acf2d"
+    if Hardware::CPU.intel?
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_linux-amd64"
+      sha256 "177f7500fa578f15f52d40f1c1d5c2c37ebbb0788b3cab5a738fe9a67dda03eb"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_linux-amd64"
-      sha256 "9a088e67ac4f2d656da70e84eac27fce216bd9357f9cf65a39fd64b6d9981fd4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.6/cd-cli_linux-arm64"
+      sha256 "a993056b0e9002ce77d41d1f70c0aaea41b51266fea21533b227c3af5f9ceae3"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
