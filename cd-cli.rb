@@ -5,21 +5,21 @@
 class CdCli < Formula
   desc ""
   homepage ""
-  version "0.0.10"
+  version "0.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.10/cd-cli_darwin-arm64"
-      sha256 "7389ad52b51ab2393e182f78f53dab1f429aa5cc60649fa6bdee70cd2825fdf0"
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.1.0/cd-cli_darwin-arm64"
+      sha256 "5ec4eeff01325f0f8c3ddbacfab080d3806c831c0630b8f190e1c3c83bcb7500"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.10/cd-cli_darwin-amd64"
-      sha256 "13a99d3d08847b8f8e5af843c64392e4268c26265ceaa96877872f534f940e2c"
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.1.0/cd-cli_darwin-amd64"
+      sha256 "1a9582f91b8a99ad54f5daecf5ae5e5b9794396d638dd0dc001db783551ae46d"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
@@ -29,16 +29,16 @@ class CdCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.10/cd-cli_linux-amd64"
-      sha256 "b675ba64c3e3195be922a3fabb929bd638eb21ffa7537e628371944fbf371cc6"
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.1.0/cd-cli_linux-amd64"
+      sha256 "847eb9540810ffa04b70651a95478fe2c493950691965c0c30807199801a42d4"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.0.10/cd-cli_linux-arm64"
-      sha256 "d43be41697943848b72e27b3c98fed6de6d2fedf9b472221168ac255002a2e25"
+      url "https://github.com/giantswarm/cloud-director-cli/releases/download/v0.1.0/cd-cli_linux-arm64"
+      sha256 "d42e6c846ab0107c86a6b71d9afa8bab3eed91c5a96885907c426d7ca9fad57d"
 
       def install
         bin.install stable.url.split("/")[-1] => "cd-cli"
